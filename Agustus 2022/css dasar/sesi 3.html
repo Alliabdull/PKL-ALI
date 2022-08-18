@@ -1,0 +1,73 @@
+Penempatan css
+
+jadi kita bisa simpan css di halaman yang sama atau kita buat file sendiri yang terpisah dengan eksensi valen css nanti kita hubungkan antara file html dan css.
+
+<p>
+    Penempatan css:
+-embed:
+<style></style>
+-inline
+<p style="color: lightblue;"> ...</p>
+-External
+<link real="stylesheet" href="style.css"></p>
+<hr>
+
+
+<h2>Embed:</h2>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EMBED CSS</title>
+    <style>
+        h1{ 
+            color: rgb(230, 3, 154);
+            font-family: arial;
+        }
+    </style>
+</head>
+</html>
+
+    <h1>Hello Word</h1>
+
+    <p><b>Selamat Pagi, TETAP MENYERAH DAN PUTUS ASA YA MAN TEMAN</b></p><p>Embedded style sheet sering digunakan untuk mengatur laman web dengan tampilan yang unik. Misalnya dalam satu paragraf tulisan ada kalimat yang berbeda dan hal tersebut terus berulang.</p>
+</body>
+</html>
+
+<hr>
+<h2>Inline:</h2>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline CSS</title>
+</head>
+<body>
+<h1 style="color : rgb(28, 164, 209);">Selamat Pagi</h1>  
+    <p><b>TETAP JADI BEBAN YA, SOALNYA GAGUNA KAMU</b></p><p>Inline CSS adalah kode CSS yang ditulis langsung pada atribut elemen HTML. Setiap elemen HTML memiliki atribut style, di situ lah inline CSS ditulis. Cara ini kurang efisien karena setiap tag HTML yang diberikan harus memiliki style masing-masing.</p>
+</body>
+</html>
+
+<hr>
+<h2>External harus mempunyai 2 file untuk menjalankanya:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EXTERNAL CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<h1>Hello Word</h1>
+    <p><b>JANGAN TERLALU BAIK, NANTI GAMPANG DISEPELIN</b></p><p>Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML Eksternal CSS ditulis di sebuah file khusus yang berekstensi .css. File eksternal CSS biasanya diletakkan setelah bagian <head> pada halaman.</p>
+</body>
+</html>
+</h2>
+file yang kedua style.css
+
+h1 {
+    color: blue;
+    font-family: arial;
+    font-size: 100px;
+}
