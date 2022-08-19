@@ -1,0 +1,12 @@
+h1 {
+    color: blue;
+    font-family: arial, Verdana,  Tahoma, sans-serif;
+    font-size: 50px;
+    font-variant:small-caps;
+    font-style: italic;
+}
+
+p {
+    font-family: Georgia, serif;
+    color: rosybrown;
+}

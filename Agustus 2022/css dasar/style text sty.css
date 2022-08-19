@@ -1,0 +1,14 @@
+h1 {
+    font-size:80px;
+    color: rgb(115,80,212);
+}
+
+p {
+    text-indent: 100px;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+}
+
+a {
+    text-decoration: none;
+}

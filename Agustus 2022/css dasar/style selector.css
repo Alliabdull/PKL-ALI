@@ -1,0 +1,23 @@
+body {
+    font-family: arial;
+}
+
+h1, h2 {
+    color: green;
+}
+
+ul li a {
+    color: orange;
+}
+
+ol li a {
+    color: red;
+}
+
+#p1 {
+    color: orange;
+}
+
+.p2 {
+    color: red;
+}
