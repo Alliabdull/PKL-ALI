@@ -13,7 +13,7 @@
 
 // variabel dan tipe data
 // variabel
-$nama = "Ali Abdul Rokhim"
+$nama = "Ali Abdul ganteng"
 ?>
 
 <!DOCTYPE html>
