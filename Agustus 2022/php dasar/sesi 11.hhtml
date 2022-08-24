@@ -1,0 +1,8 @@
+<p> PHP & MYSQL </p>
+
+
+
+-Untuk menghubungkan halaman web kita dengan my sql, kita bisa menguhubungkanya dengan beberapa cara:
+Ekstensi/driver MySQL
+Ekstenti MySqli
+PDO (PHP Data object)
