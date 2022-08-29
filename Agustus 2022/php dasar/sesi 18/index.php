@@ -1,16 +1,18 @@
 <?php
 session_start();
 
-if( isset($_SESSION["login"]) ) {
+if (!isset($_SESSION["login"])) {
     header("location: login.php");
     exit;
 }
+
+
 
 require 'functions.php';
 $mahasiswa = query("SELECT * FROM mahasiswa");
 
 // tombol cari ditekan
-if( isset($_POST["cari"]) ) {
+if (isset($_POST["cari"])) {
     $mahasiswa = cari($_POST["keyword"]);
 }
 
@@ -20,52 +22,55 @@ if( isset($_POST["cari"]) ) {
 <head>
     <title>Halaman Admin</title>
 </head>
+
 <body>
 
-<h1>Daftar Mahasiswa</h1>
+    <a href="logout.php">logout</a>
 
-<a href="tambah.php">Tambah Data Mahasiswa</a>
-<br><br>
+    <h1>Daftar Mahasiswa</h1>
 
-<form action="" method="post">
+    <a href="tambah.php">Tambah Data Mahasiswa</a>
+    <br><br>
 
-    <input type="text" name="keyword" size="40" autofocus
-    placeholder="Masukan Keyword Pencarian.." autocomplete="off"> 
-    <button type="submit" name="cari">Cari!</button>
+    <form action="" method="post">
 
-</form>
+        <input type="text" name="keyword" size="40" autofocus placeholder="Masukan Keyword Pencarian.." autocomplete="off">
+        <button type="submit" name="cari">Cari!</button>
 
-<table border="1" cellpadding="10" cellspacing="0">
-    <tr>
-        <td>No.</td>
-        <td>Aksi</td>
-        <td>Gambar</td>
-        <td>NRP</td>
-        <td>Nama</td>
-        <td>Email</td>
-        <td>Jurusan</td>
-    </tr>
+    </form>
 
-    <?php $i = 1; ?>
-    <?php foreach( $mahasiswa as $row) : ?>
-    <tr>
-        <td><?= $i ; ?> </td>
-        <td>
-            <a href="ubah.php?id=<?= $row["id"]; ?>">ubah</a> |
-            <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <td>No.</td>
+            <td>Aksi</td>
+            <td>Gambar</td>
+            <td>NRP</td>
+            <td>Nama</td>
+            <td>Email</td>
+            <td>Jurusan</td>
+        </tr>
+
+        <?php $i = 1; ?>
+        <?php foreach ($mahasiswa as $row) : ?>
+            <tr>
+                <td><?= $i; ?> </td>
+                <td>
+                    <a href="ubah.php?id=<?= $row["id"]; ?>">ubah</a> |
+                    <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="
             return confirm('yakin?');">hapus</a>
-        </td>
+                </td>
 
-        <td><img src="img/<?= $row["gambar"]; ?>" width="50"></td>
-        <td><?= $row["nrp"]; ?></td>
-        <td><?= $row["nama"]; ?></td>
-        <td><?= $row["email"]; ?></td>
-        <td><?= $row["jurusan"]; ?></td>
-    </tr>
-    <?php $i++; ?>
-    <?php endforeach; ?>
+                <td><img src="img/<?= $row["gambar"]; ?>" width="50"></td>
+                <td><?= $row["nrp"]; ?></td>
+                <td><?= $row["nama"]; ?></td>
+                <td><?= $row["email"]; ?></td>
+                <td><?= $row["jurusan"]; ?></td>
+            </tr>
+            <?php $i++; ?>
+        <?php endforeach; ?>
 
-</table>
+    </table>
 
 </body>
+
 </html>
