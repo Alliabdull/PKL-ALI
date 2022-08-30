@@ -1,0 +1,10 @@
+PDF Reporting
+Dengan mengubah script php kita menjadi pdf, itu memungkinkan kita untuk membuat:
+
+-Laporan
+-Kuitansi/invoice/faktur
+-Form isian
+
+untuk mengubah script php kita menjadi pdf adalah:
+-memanfaatkan fitur bawaan dari browser
+-library PHP:FPDF,mPDF,DOMPDF
