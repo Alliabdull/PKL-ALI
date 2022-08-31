@@ -1,5 +1,5 @@
 <?php  
-    LATIHAN 1
+    
 // array
 // variabel yang dapat memiliki  banyak nilai
 // elemen pada array boleh memiliki tipe data yang berbeda
@@ -12,7 +12,7 @@ $hari = array("senin", "sealasa", "rabu");
  $arr1 = [123, "tulisan", false];
 
 // menampilkan array
-var_dump() / print_r()
+var_dump()/ print_r();
 var_dump($hari);
 echo "<br>";
 print_r($bulan);
