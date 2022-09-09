@@ -1,0 +1,20 @@
+.jumbotron {
+  background-image: url(image/zz.png);
+  padding-top: 7rem;
+  background-color: #b3c7ec;
+}
+
+#about {
+  padding-top: 4rem;
+  background-color: #cf540d;
+}
+
+#projects {
+  padding-top: 4rem;
+  background-color: #cf540d;
+}
+
+#contact {
+  padding-top: 2rem;
+  background-color: #cf540d;
+}

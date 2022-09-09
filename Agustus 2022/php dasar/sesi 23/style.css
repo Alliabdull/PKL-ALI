@@ -1,0 +1,17 @@
+body{
+    background-color: #076750;
+}
+
+#main{
+    width: 300px;
+    margin: 0 auto;
+    padding-top:40px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    margin-top: 150px;
+}
