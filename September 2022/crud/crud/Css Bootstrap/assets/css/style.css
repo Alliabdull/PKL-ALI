@@ -1,0 +1,39 @@
+.jumbotron {
+  padding-top: 2rem;
+  background-color: lightblue;
+}
+
+#home {
+  padding-top: 4rem;
+  background-color: lightblue;
+}
+
+#projects {
+  padding-top: 4rem;
+  background-color: lightblue;
+}
+
+.navbar-brand {
+  font-family: 'Righteous', cursive;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.pad-top {
+  margin-top: 10px !important;
+}
+.marg-btn {
+  margin-bottom: 10px;
+}
+.marg-top {
+  margin-top: 5px !important;
+}
+
+.link a {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
+  color: lightblue;
+}
