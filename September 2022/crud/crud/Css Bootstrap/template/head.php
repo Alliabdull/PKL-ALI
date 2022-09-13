@@ -33,7 +33,7 @@
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 		<a class="navbar-brand" href="#sterida">
-          <img src="image/oke.png" alt="Logo" width="45" height="40">
+          <img src="images/oke.png" alt="Logo" width="45" height="40">
         </a>
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 				<span class="sr-only">Toggle navigation</span>

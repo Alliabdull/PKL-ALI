@@ -65,10 +65,10 @@
 
        <style type="text/css">
          .war1{
-          background-color: grey;
+          background-color: Red;
          }
          .war2 {
-          background-color:lightblue;
+          background-color: grey;
          }
          h1 {
           color:white !important;
@@ -82,11 +82,7 @@
        </style>
 	</head>
 	<body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#sterida">
-          <img src="image/oke.png" alt="Logo" width="40" height="40">
-        </a>
+
         	<div class="jumbotron war1">
       <div class="container-fluid">
         <h1 class="text-center" >Smk Pgri 2 Ponorogo</h1>

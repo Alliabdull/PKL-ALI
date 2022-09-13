@@ -52,7 +52,7 @@
 
 		 <!-- jumbotron -->
 		 <section class="jumbotron text-center">
-      <img src="images/1.png" alt="alliabdull" width="380" class="rounded-circle" />
+      <img src="images/1.png" alt="alliabdull" width="400" class="rounded-circle" />
       <h1 class="display-4"><b>Sterida</b></h1>
       <p class="lead"><b><h3>Terbukti Lebih Maju</h3></b></p>
     <!-- akhir jumbotron -->
@@ -61,7 +61,7 @@
     <section id="Home">
       <div class="container">
         <div class="row text-center">
-          <div class="col mc-4">
+          <div class="col md-4">
           </div>
         </div>
         <div class="row justify-content-center fs-5">
@@ -70,6 +70,7 @@
               SMK PGRI 2 PONOROGO adalah salah satu satuan pendidikan dengan jenjang SMK di Kertosari, Kec. Babadan, Kab. Ponorogo, Jawa Timur. 
               Dalam menjalankan kegiatannya, SMK PGRI 2 PONOROGO berada di bawah naungan Kementerian
               Pendidikan dan Kebudayaan. SMK PGRI 2 PONOROGO adalah sekolah industri yang berbasis pondok pesantren.
+			  Smk Pgri 2 Ponorogo selalu mendidik Karakter siwa dan siswinya agar Kelak Mudah di Masa Depan Mereka
             </p>
           </div>
         </div>
