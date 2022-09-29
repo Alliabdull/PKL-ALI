@@ -4,9 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title> Portfolio | alliabdull</title>
-
-
+		<title>My Portfolio | alliabdull</title>
 
 		<!-- Bootstrap CSS -->
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -87,30 +85,28 @@
       <div class="container-fluid">
         <h1 class="text-center" >Smk Pgri 2 Ponorogo</h1>
 
-        <div class="row">
+        <div class="row	">
           <div class="col-md-4 col-md-offset-4">
 
             <form action="dashboard.php" method="POST" role="form">
-              <legend class="text-center">FORM Login</legend>
+              <legend class="text-center">Masuk Ke Dalam Website</legend>
 
-              <div class="form-group">
-                <label for="">Username</label>
-                <input type="text" name="username" class="form-control" id="" placeholder="Input field">
-              </div>
-
-               <div class="form-group">
-                <label for="">Password</label>
-                <input type="text" name="password" class="form-control" id="" placeholder="Input field">
-              </div>
-
-              <button type="submit" class="btn btn-success">Submit</button>
+		 <div class="row">
+			<div class="col-md-4 col-md-offset-5">
+		
+              <button type="masuk" class="btn btn-success">Masuk</button>
             </form>
 
-          </div>
-        </div>
+		  </div>
+		</div>
+		
+		    </div>
+		</div>
 
-      </div>
-    </div>
+          
+
+      
+    
 
     
 

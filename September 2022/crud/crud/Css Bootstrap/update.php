@@ -56,7 +56,7 @@ if($_POST){
           </div>
 
           <div class="form-group">
-            <label>alamat</label>
+            <label>Kelas</label>
             <input class="form-control" value="<?= $obj->alamat ?>" type="text" name="alamat" maxlength="30" required="">
           </div>
 

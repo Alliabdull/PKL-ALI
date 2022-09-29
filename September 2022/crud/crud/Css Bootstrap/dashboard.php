@@ -70,7 +70,7 @@
               SMK PGRI 2 PONOROGO adalah salah satu satuan pendidikan dengan jenjang SMK di Kertosari, Kec. Babadan, Kab. Ponorogo, Jawa Timur. 
               Dalam menjalankan kegiatannya, SMK PGRI 2 PONOROGO berada di bawah naungan Kementerian
               Pendidikan dan Kebudayaan. SMK PGRI 2 PONOROGO adalah sekolah industri yang berbasis pondok pesantren.
-			  Smk Pgri 2 Ponorogo selalu mendidik Karakter siwa dan siswinya agar Kelak Mudah di Masa Depan Mereka
+			  Smk Pgri 2 Ponorogo selalu mendidik Karakter Siswa dan Siswinya agar Kelak Mudah di Masa Depan Mereka
             </p>
           </div>
         </div>
@@ -112,6 +112,39 @@
         </div>
       </div>
           </section>
+		  <div class="kolom">
+				</div>
+		    <section id="projects">
+      <div class="container">
+        <div class="row-text-center">
+          <div class="row">
+          </div>
+        </div>
+			<div class="row">
+          <div class="col-md-4">
+            <div class="card">
+            <img src="images/rpl.jpg" alt="projects4" class="img-thumbnail">
+              <div class="card-body">
+                <p class="card-text"><b>Nothing Is Impossible, Whatever You Think, Think the Opposite</b></p>
+              </div>
+        </div>
+      </div>
+          <div class="col-md-4">
+            <div class="card">
+			<img src="images/gapura.jfif" alt="projects5" class="img-thumbnail">
+              <div class="card-body">
+                <p class="card-text"><b>Sakit dalam perjuangan itu hanyalah sementara, tapi jika menyerah sakit itu akan terasa selamanya</b></p>                
+              </div>
+        </div>
+      </div>
+          <div class="col-md-4">
+            <div class="card">
+			<img src="images/prsdn.jfif" alt="projects6" class="img-thumbnail">
+              <div class="card-body">
+                <p class="card-text"><b>Jangan menyerah atas impianmu, impian memberimu tujuan hidup</b></p>
+              </div>
+        </div>
+      </div>
+          </section>
 
-		
 <?php include 'template/footer.php'; ?>

@@ -1,5 +1,4 @@
 
-
   	<!-- jQuery -->
     <script src="assets/js/jQuery.min.js"></script>
 

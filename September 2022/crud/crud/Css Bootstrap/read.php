@@ -33,7 +33,6 @@ $query = "SELECT tsiswa.no, tsiswa.nama_lengkap,tsiswa.tempat_lahir,tsiswa.tangg
                 <th>email</th>
                 <th>no hp</th>
                 <th>alamat</th>
-                <th>materi</th>
                 <th style="text-align: center;">Actions</th>
               </tr>
               <?php
@@ -50,7 +49,6 @@ $query = "SELECT tsiswa.no, tsiswa.nama_lengkap,tsiswa.tempat_lahir,tsiswa.tangg
                     <td><?= $obj->email?></td>
                     <td><?= $obj->no_hp?></td>
                     <td><?= $obj->alamat?></td>
-                    <td><?= $obj->materi?></td>
                     <td style="text-align: center;">
                       <a onclick="return confirm('Apakah yakin data akan di hapus?')" href="delete.php?no=<?php echo $obj->no;?>" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></a>
                       <a href="update.php?no=<?php echo $obj->no;?>" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-edit"></span>>Edit</a>

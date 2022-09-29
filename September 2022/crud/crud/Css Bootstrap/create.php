@@ -52,14 +52,14 @@ if(isset($_POST['simpan'])){
           </div>
 
           <div class="form-group">
-            <label>ALAMAT</label>
+            <label>Alamat</label>
             <textarea class="form-control" name="alamat" placeholder="masukan alamat anda disini"></textarea>
           </div> 
 
 
           <div class="form-group">
-            <label>Materi</label>
-            <select name="no materi">
+            <label>Kelas</label>
+            <select name="no_materi">
               <?php
               $sql='SELECT * FROM `tmateri`';
               $query=mysqli_query($koneksi,$sql);

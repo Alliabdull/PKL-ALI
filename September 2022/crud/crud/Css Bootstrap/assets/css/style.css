@@ -1,14 +1,19 @@
 .jumbotron {
-  padding-top: 2rem;
+  padding-top: rem;
   background-color: lightblue;
 }
 
+.text-white {
+  color: white !important;
+  text-shadow: black;
+}
+
 #home {
-  padding-top: 4rem;
   background-color: lightblue;
 }
 
 #projects {
+  background-image: url(images/prsdn.jfif);
   padding-top: 4rem;
   background-color: lightblue;
 }
