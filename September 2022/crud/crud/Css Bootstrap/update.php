@@ -60,7 +60,7 @@ if($_POST){
             <input class="form-control" value="<?= $obj->alamat ?>" type="text" name="alamat" maxlength="30" required="">
           </div>
 
-          <a href="buku.php" class="btn btn-success btn-sm">kembali</a>
+          <a href="read.php" class="btn btn-success btn-sm">kembali</a>
           <button type="submit" class="btn btn-info">Submit</button>
           <button type="reset" class="btn btn-link">Reset</button>
         </form>

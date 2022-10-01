@@ -27,35 +27,35 @@ $query = "SELECT tsiswa.no, tsiswa.nama_lengkap,tsiswa.tempat_lahir,tsiswa.tangg
             <table class="table table-hover table-bordered" style="margin-top: 10px">
               <tr class="success">
                 <th width="50px">No</th>
-                <th>nama lengkap</th>
-                <th>tempat lahir</th>
-                <th>tanggal lahir</th>
-                <th>email</th>
-                <th>no hp</th>
-                <th>alamat</th>
+                <th>Nama Lengkap</th>
+                <th>Tempat Lahir</th>
+                <th>Tanggal Lahir</th>
+                <th>Email</th>
+                <th>No Hp</th>
+                <th>Alamat</th>
                 <th style="text-align: center;">Actions</th>
               </tr>
               <?php
-              if($data=mysqli_query($koneksi,$query)){
-                $no=1;
-                while($obj=mysqli_fetch_object($data)){
+              if ($data = mysqli_query($koneksi, $query)) {
+                $no = 1;
+                while ($obj = mysqli_fetch_object($data)) {
                   // print_r($obj);die();
-                  ?>
+              ?>
                   <tr>
                     <td><?= $no ?></td>
-                    <td><?= $obj->nama_lengkap?></td>
-                    <td><?= $obj->tempat_lahir?></td>
-                    <td><?= $obj->tanggal_lahir?></td>
-                    <td><?= $obj->email?></td>
-                    <td><?= $obj->no_hp?></td>
-                    <td><?= $obj->alamat?></td>
+                    <td><?= $obj->nama_lengkap ?></td>
+                    <td><?= $obj->tempat_lahir ?></td>
+                    <td><?= $obj->tanggal_lahir ?></td>
+                    <td><?= $obj->email ?></td>
+                    <td><?= $obj->no_hp ?></td>
+                    <td><?= $obj->alamat ?></td>
                     <td style="text-align: center;">
-                      <a onclick="return confirm('Apakah yakin data akan di hapus?')" href="delete.php?no=<?php echo $obj->no;?>" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></a>
-                      <a href="update.php?no=<?php echo $obj->no;?>" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-edit"></span>>Edit</a>
+                      <a onclick="return confirm('Apakah Yakin Data Akan Dihapus?')" href="delete.php?no=<?php echo $obj->no; ?>" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></a>
+                      <a href="update.php?no=<?php echo $obj->no; ?>" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-edit"></span>>Edit</a>
 
                     </td>
                   </tr>
-                  <?php
+              <?php
                   $no++;
                 }
               }
@@ -67,4 +67,5 @@ $query = "SELECT tsiswa.no, tsiswa.nama_lengkap,tsiswa.tempat_lahir,tsiswa.tangg
     </div>
   </div><!-- end row -->
 </div><!-- container -->
-<?php include 'template/footer.php'; ?>
+<?php include 'template/footer.php';
+?>
