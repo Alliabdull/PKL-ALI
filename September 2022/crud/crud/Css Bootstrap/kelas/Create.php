@@ -1,6 +1,6 @@
 <?php
-include 'template/head.php';
-require_once('koneksi/koneksi.php');
+include '../template/head.php';
+require_once('../koneksi/koneksi.php');
 if (isset($_POST['simpan'])) {
   try {
     $sql = "INSERT INTO tkelas (Nama_Kelas,Deskripsi,Logo_Kelas)VALUES('" . $_POST['Nama_Kelas'] . "','" . $_POST['Deskripsi'] . "','" . $_POST['Logo_Kelas'] . "')";
@@ -14,7 +14,7 @@ if (isset($_POST['simpan'])) {
   }
   echo "<script>
     alert('Data berhasil di simpan');
-    window.location.href='Kelas.php';
+    window.location.href='../Kelas.php';
     </script>";
 }
 ?>
@@ -32,7 +32,7 @@ if (isset($_POST['simpan'])) {
 
         <div class="form-group">
           <label>DESKRIPSI</label>
-          <input type="text" name="Deskripsi" class="form-control" placeholder="Masukan Ddeskripsi Disini" required>
+          <input type="text" name="Deskripsi" class="form-control" placeholder="Masukan Deskripsi Disini" required>
         </div>
         <div class="form-group">
           <label>LOGO KELAS</label>
@@ -41,7 +41,7 @@ if (isset($_POST['simpan'])) {
 
 
 
-        <a href="Kelas.php" class="btn btn-success btn-sm">Kembali</a>
+        <a href="../Kelas.php" class="btn btn-success btn-sm">Kembali</a>
         <button type="submit" name="simpan" class="btn btn-info">Submit</button>
         <button type="reset" class="btn btn-link">Reset</button>
       </form>
@@ -49,4 +49,4 @@ if (isset($_POST['simpan'])) {
 
   </div>
 </div>
-<?php include 'template/footer.php'; ?>
+<?php include '../template/footer.php'; ?>

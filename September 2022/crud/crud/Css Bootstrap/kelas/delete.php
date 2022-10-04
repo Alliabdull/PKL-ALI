@@ -1,5 +1,5 @@
 <?php
-require_once('koneksi/koneksi.php');
+require_once('../koneksi/koneksi.php');
 try {
   $sql = "DELETE FROM tkelas WHERE Id=" . $_GET['Id'];
   $koneksi->query($sql);
@@ -9,5 +9,5 @@ try {
 }
 echo "<script>
 alert('Data Berhasil Di Hapus');
-window.location.href='Kelas.php';
+window.location.href='../Kelas.php';
 </script>";

@@ -1,6 +1,6 @@
 <?php
-include 'template/head.php';
-require_once('koneksi/koneksi.php');
+include '../template/head.php';
+require_once('../koneksi/koneksi.php');
 if (isset($_POST['simpan'])) {
   try {
     $sql = "INSERT INTO tsiswa (nama_lengkap,tempat_lahir,tanggal_lahir,email,no_hp,alamat,no_materi) VALUES ('" . $_POST['nama_lengkap'] . "','" . $_POST['tempat_lahir'] . "','" . $_POST['tanggal_lahir'] . "','" . $_POST['email'] . "','" . $_POST['no_hp'] . "','" . $_POST['alamat'] . "','" . $_POST['no_materi'] . "')";
@@ -14,7 +14,7 @@ if (isset($_POST['simpan'])) {
   }
   echo "<script>
     alert('Data berhasil di simpan');
-    window.location.href='read.php';
+    window.location.href='../read.php';
     </script>";
 }
 ?>
@@ -58,15 +58,15 @@ if (isset($_POST['simpan'])) {
 
 
         <div class="form-group">
-          <label>Siswa</label>
-          <select name="no_materi">
+          <label>Kelas</label>
+          <select name="no_materi" class="form-control">
             <?php
-            $sql = 'SELECT * FROM `tmateri`';
+            $sql = 'SELECT * FROM `tkelas`';
             $query = mysqli_query($koneksi, $sql);
             while ($obj = mysqli_fetch_object($query)) {
               // print_r($obj);die();
             ?>
-              <option value="<?= $obj->no_materi ?>"><?= $obj->materi ?></option>
+              <option value="<?= $obj->Id ?>"><?= $obj->Nama_Kelas ?></option>
             <?php
 
             }
@@ -86,4 +86,4 @@ if (isset($_POST['simpan'])) {
 
   </div>
 </div>
-<?php include 'template/footer.php'; ?>
+<?php include '../template/footer.php'; ?>

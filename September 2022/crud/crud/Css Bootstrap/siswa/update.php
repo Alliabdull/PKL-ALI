@@ -1,29 +1,29 @@
 <?php
-include 'template/head.php';
-require_once('koneksi/koneksi.php');
-if($_POST){
+include '../template/head.php';
+require_once('../koneksi/koneksi.php');
+if ($_POST) {
   /*print_r($_POST);die();*/
-  $sql = "UPDATE tsiswa SET no='".$_POST['no']."',nama_lengkap='".$_POST['nama_lengkap']."',tempat_lahir='".$_POST['tempat_lahir']."',tanggal_lahir='".$_POST['tanggal_lahir']."',email='".$_POST['email']."',no_hp='".$_POST['no_hp']."',alamat='".$_POST['alamat']."' WHERE no=".$_POST['no'];
+  $sql = "UPDATE tsiswa SET no='" . $_POST['no'] . "',nama_lengkap='" . $_POST['nama_lengkap'] . "',tempat_lahir='" . $_POST['tempat_lahir'] . "',tanggal_lahir='" . $_POST['tanggal_lahir'] . "',email='" . $_POST['email'] . "',no_hp='" . $_POST['no_hp'] . "',alamat='" . $_POST['alamat'] . "' WHERE no=" . $_POST['no'];
   /*print_r($sql);die();*/
   if ($koneksi->query($sql) === TRUE) {
     echo "<script>
     alert('Data berhasil di update');
-    window.location.href='read.php';
+    window.location.href='../read.php';
     </script>";
   } else {
     echo "Gagal: " . $koneksi->error;
   }
   $koneksi->close();
-}else{
-   $query = $koneksi->query("SELECT * FROM tsiswa WHERE no=".$_GET['no']);
-  if($query->num_rows > 0){
+} else {
+  $query = $koneksi->query("SELECT * FROM tsiswa WHERE no=" . $_GET['no']);
+  if ($query->num_rows > 0) {
     $obj = mysqli_fetch_object($query);
     // print_r();die();
-  }else{
+  } else {
     echo "data tidak tersedia";
     die();
   }
-  ?>
+?>
   <div class="jumbotron ">
     <div class="container ">
       <h3>Input Data Siswa</h3>
@@ -42,7 +42,7 @@ if($_POST){
 
           <div class="form-group">
             <label>tanggal lahir</label>
-            <input class="form-control" value="<?= $obj->tanggal_lahir?>" type="date" name="tanggal_lahir" maxlength="30" required="">
+            <input class="form-control" value="<?= $obj->tanggal_lahir ?>" type="date" name="tanggal_lahir" maxlength="30" required="">
           </div>
 
           <div class="form-group">
@@ -60,15 +60,15 @@ if($_POST){
             <input class="form-control" value="<?= $obj->alamat ?>" type="text" name="alamat" maxlength="30" required="">
           </div>
 
-          <a href="read.php" class="btn btn-success btn-sm">kembali</a>
+          <a href="../read.php" class="btn btn-success btn-sm">kembali</a>
           <button type="submit" class="btn btn-info">Submit</button>
           <button type="reset" class="btn btn-link">Reset</button>
         </form>
       </div>
     </div>
   </div>
-  <?php
-  include 'template/footer.php';
+<?php
+  include '../template/footer.php';
 }
 mysqli_close($koneksi);
 ?>
