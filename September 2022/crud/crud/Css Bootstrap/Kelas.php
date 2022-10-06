@@ -2,7 +2,7 @@
 // include 'template/head.php';
 require_once('koneksi/koneksi.php');
 // $query = "SELECT 'buk_id','buk_nama','buk_pengarang' FROM tb_buku";
-$query = "SELECT tkelas.Id, tkelas.Nama_Kelas,tkelas.Deskripsi,tkelas.Logo_Kelas FROM tkelas";
+$query = "SELECT * FROM tkelas";
 ?>
 <!DOCTYPE html>
 <html lang="">
@@ -54,6 +54,8 @@ $query = "SELECT tkelas.Id, tkelas.Nama_Kelas,tkelas.Deskripsi,tkelas.Logo_Kelas
               <a class="navbar-brand text-white" href="dashboard.php">Home</a>
               <a class="navbar-brand text-white" href="Kelas.php">Kelas</a>
               <a class="navbar-brand text-white" href="read.php">Data Siswa</a>
+              <a class="navbar-brand text-white" href="Eks.php">Ekstrakurikuler</a>
+
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex2-collapse">

@@ -2,7 +2,7 @@
 // include 'template/head.php';
 require_once('koneksi/koneksi.php');
 // $query = "SELECT 'buk_id','buk_nama','buk_pengarang' FROM tb_buku";
-$query = "SELECT tsiswa.no, tsiswa.nama_lengkap,tsiswa.tempat_lahir,tsiswa.tanggal_lahir,tsiswa.email,tsiswa.no_hp,tsiswa.alamat FROM tsiswa";
+$query = "SELECT * FROM tsiswa";
 ?>
 <!DOCTYPE html>
 <html lang="">
@@ -54,6 +54,7 @@ $query = "SELECT tsiswa.no, tsiswa.nama_lengkap,tsiswa.tempat_lahir,tsiswa.tangg
               <a class="navbar-brand text-white" href="dashboard.php">Home</a>
               <a class="navbar-brand text-white" href="kelas.php">Kelas</a>
               <a class="navbar-brand text-white" href="read.php">Data Siswa</a>
+              <a class="navbar-brand text-white" href="Eks.php">Ekstrakurikuler</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex2-collapse">
@@ -95,6 +96,7 @@ $query = "SELECT tsiswa.no, tsiswa.nama_lengkap,tsiswa.tempat_lahir,tsiswa.tangg
                   <th>Email</th>
                   <th>No Hp</th>
                   <th>Alamat</th>
+                  <th>Kelas</th>
                   <th style="text-align: center;">Actions</th>
                 </tr>
                 <?php
@@ -110,6 +112,7 @@ $query = "SELECT tsiswa.no, tsiswa.nama_lengkap,tsiswa.tempat_lahir,tsiswa.tangg
                       <td><?= $obj->tanggal_lahir ?></td>
                       <td><?= $obj->email ?></td>
                       <td><?= $obj->no_hp ?></td>
+                      <td><?= $obj->alamat ?></td>
                       <td><?= $obj->alamat ?></td>
                       <td style="text-align: center;">
                         <a onclick="return confirm('Apakah Yakin Data Akan Dihapus?')" href="siswa/delete.php?no=<?php echo $obj->no; ?>" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></a>

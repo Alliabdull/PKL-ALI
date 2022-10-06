@@ -44,10 +44,12 @@
  								<span class="icon-bar"></span>
  								<span class="icon-bar"></span>
  								<span class="icon-bar"></span>
+ 								<span class="icon bar"></span>
  							</button>
  							<a class="navbar-brand text-white" href="../dashboard.php">Home</a>
  							<a class="navbar-brand text-white" href="../kelas.php">Kelas</a>
  							<a class="navbar-brand text-white" href="../read.php">Data Siswa</a>
+ 							<a class="navbar-brand text-white" href="../Eks.php">Ekstrakurikuler</a>
  						</div>
  						<!-- Collect the nav links, forms, and other content for toggling -->
  						<div class="collapse navbar-collapse navbar-ex2-collapse">
