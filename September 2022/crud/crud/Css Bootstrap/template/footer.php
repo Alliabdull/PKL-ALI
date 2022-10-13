@@ -7,7 +7,7 @@
 
 <!-- footer -->
 <footer class="bg-primary text-white text-center pb-5">
-	<p>Created With <i class="bi bi-instagram"></i> By <a href="https://www.instagram.com/all.abdl_/" class="text-danger fw-bold">alliabdull</a></p>
+	<p>Created With <i class="bi bi-instagram"></i> By <a href="https://www.instagram.com/all.abdl_/" class="text-danger fw-bold">AlliAbdull?</a></p>
 </footer>
 </div>
 <!-- akhir footer -->

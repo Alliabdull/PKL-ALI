@@ -109,13 +109,6 @@
 		</div>
 	</div>
 
-
-
-
-
-
-
-
 	<!-- jQuery -->
 	<script src="//code.jquery.com/jquery.min.js"></script>
 	<!-- Bootstrap JavaScript -->

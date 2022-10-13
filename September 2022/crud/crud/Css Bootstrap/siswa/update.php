@@ -3,7 +3,7 @@ include '../template/head.php';
 require_once('../koneksi/koneksi.php');
 if ($_POST) {
   /*print_r($_POST);die();*/
-  $sql = "UPDATE tsiswa SET no='" . $_POST['no'] . "',nama_lengkap='" . $_POST['nama_lengkap'] . "',tempat_lahir='" . $_POST['tempat_lahir'] . "',tanggal_lahir='" . $_POST['tanggal_lahir'] . "',email='" . $_POST['email'] . "',no_hp='" . $_POST['no_hp'] . "',alamat='" . $_POST['alamat'] . "' WHERE no=" . $_POST['no'];
+  $sql = "UPDATE tsiswa SET no='" . $_POST['no'] . "',nama_lengkap='" . $_POST['nama_lengkap'] . "',tempat_lahir='" . $_POST['tempat_lahir'] . "',tanggal_lahir='" . $_POST['tanggal_lahir'] . "',email='" . $_POST['email'] . "',no_hp='" . $_POST['no_hp'] . "',alamat='" . $_POST['alamat'] . "',ekstra_id='" . $_POST['ekstra_id'] . "',no_materi='".$_POST['no_materi'] . "' WHERE no=" . $_POST['no'];
   /*print_r($sql);die();*/
   if ($koneksi->query($sql) === TRUE) {
     echo "<script>
@@ -56,8 +56,46 @@ if ($_POST) {
           </div>
 
           <div class="form-group">
-            <label>Kelas</label>
+            <label>alamat</label>
             <input class="form-control" value="<?= $obj->alamat ?>" type="text" name="alamat" maxlength="30" required="">
+          </div>
+
+          <div class="form-group">
+            <label>Ekstrakurikuler</label>
+            <select name="ekstra_id" class="form-control">
+              <?php
+              $sql = 'SELECT * FROM `tekstra`';
+              $query = mysqli_query($koneksi, $sql);
+              while ($extra = mysqli_fetch_object($query)) {
+                // print_r($obj);die();
+              ?>
+                <option value="<?= $extra->Id ?>" <?php if ($extra->Id == $obj->ekstra_id) {
+                                                    echo 'selected';
+                                                  } ?>><?= $extra->Bidang_Ekstrakurikuler ?></option>
+              <?php
+
+              }
+              ?>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Kelas</label>
+            <select name="no_materi" class="form-control">
+              <?php
+              $sql = 'SELECT * FROM `tkelas`';
+              $query = mysqli_query($koneksi, $sql);
+              while ($kelas = mysqli_fetch_object($query)) {
+                // print_r($obj);die();
+              ?>
+                <option value="<?= $kelas->Id ?>" <?php if ($kelas->Id == $obj->no_materi) {
+                                                    echo 'selected';
+                                                  } ?>><?= $kelas->Nama_Kelas ?></option>
+              <?php
+
+              }
+              ?>
+            </select>
           </div>
 
           <a href="../read.php" class="btn btn-success btn-sm">kembali</a>

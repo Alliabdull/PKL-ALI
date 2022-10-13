@@ -3,7 +3,7 @@ include '../template/head.php';
 require_once('../koneksi/koneksi.php');
 if (isset($_POST['simpan'])) {
   try {
-    $sql = "INSERT INTO tsiswa (nama_lengkap,tempat_lahir,tanggal_lahir,email,no_hp,alamat,no_materi) VALUES ('" . $_POST['nama_lengkap'] . "','" . $_POST['tempat_lahir'] . "','" . $_POST['tanggal_lahir'] . "','" . $_POST['email'] . "','" . $_POST['no_hp'] . "','" . $_POST['alamat'] . "','" . $_POST['no_materi'] . "')";
+    $sql = "INSERT INTO tsiswa (nama_lengkap,tempat_lahir,tanggal_lahir,email,no_hp,alamat,no_materi,ekstra_id) VALUES ('" . $_POST['nama_lengkap'] . "','" . $_POST['tempat_lahir'] . "','" . $_POST['tanggal_lahir'] . "','" . $_POST['email'] . "','" . $_POST['no_hp'] . "','" . $_POST['alamat'] . "','" . $_POST['no_materi'] . "','" . $_POST['ekstra_id'] . "' )";
     if (!$koneksi->query($sql)) {
       echo $koneksi->error;
       die();
@@ -54,6 +54,23 @@ if (isset($_POST['simpan'])) {
         <div class="form-group">
           <label>Alamat</label>
           <textarea class="form-control" name="alamat" placeholder="masukan alamat anda disini"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Ekstrakurikuler</label>
+          <select name="ekstra_id" class="form-control">
+            <?php
+            $sql = 'SELECT * FROM `tekstra`';
+            $query = mysqli_query($koneksi, $sql);
+            while ($obj = mysqli_fetch_object($query)) {
+              // print_r($obj);die();
+            ?>
+              <option value="<?= $obj->Id ?>"><?= $obj->Bidang_Ekstrakurikuler ?></option>
+            <?php
+
+            }
+            ?>
+          </select>
         </div>
 
 

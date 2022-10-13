@@ -2,7 +2,7 @@
 // include 'template/head.php';
 require_once('koneksi/koneksi.php');
 // $query = "SELECT 'buk_id','buk_nama','buk_pengarang' FROM tb_buku";
-$query = "SELECT * FROM tsiswa";
+$query = "SELECT tsiswa.*, tekstra.Bidang_Ekstrakurikuler, tkelas.Nama_Kelas FROM tsiswa LEFT JOIN tkelas ON tsiswa.no_materi = tkelas.Id LEFT JOIN tekstra ON tsiswa.ekstra_id = tekstra.Id";
 ?>
 <!DOCTYPE html>
 <html lang="">
@@ -32,7 +32,6 @@ $query = "SELECT * FROM tsiswa";
 </head>
 
 <body id="home">
-
 
   <!-- navbar -->
   <nav class="navbar navbar-default" role="navigation">
@@ -91,11 +90,10 @@ $query = "SELECT * FROM tsiswa";
                 <tr class="success">
                   <th width="50px">No</th>
                   <th>Nama Lengkap</th>
-                  <th>Tempat Lahir</th>
-                  <th>Tanggal Lahir</th>
+                  <th>Tempat Tanggal Lahir</th>
                   <th>Email</th>
                   <th>No Hp</th>
-                  <th>Alamat</th>
+                  <th>Ekstrakurikuler</th>
                   <th>Kelas</th>
                   <th style="text-align: center;">Actions</th>
                 </tr>
@@ -108,12 +106,11 @@ $query = "SELECT * FROM tsiswa";
                     <tr>
                       <td><?= $no ?></td>
                       <td><?= $obj->nama_lengkap ?></td>
-                      <td><?= $obj->tempat_lahir ?></td>
-                      <td><?= $obj->tanggal_lahir ?></td>
+                      <td><?= $obj->tempat_lahir ?>,<?= $obj->alamat ?>,<?= $obj->tanggal_lahir ?></td>
                       <td><?= $obj->email ?></td>
                       <td><?= $obj->no_hp ?></td>
-                      <td><?= $obj->alamat ?></td>
-                      <td><?= $obj->alamat ?></td>
+                      <td><?= $obj->Bidang_Ekstrakurikuler ?></td>
+                      <td><?= $obj->Nama_Kelas ?? 'Belum ada data kelas' ?></td>
                       <td style="text-align: center;">
                         <a onclick="return confirm('Apakah Yakin Data Akan Dihapus?')" href="siswa/delete.php?no=<?php echo $obj->no; ?>" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span></a>
                         <a href="siswa/update.php?no=<?php echo $obj->no; ?>" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-edit"></span>>Edit</a>
